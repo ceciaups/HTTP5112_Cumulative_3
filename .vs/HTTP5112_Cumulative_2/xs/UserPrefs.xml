@@ -1,0 +1,29 @@
+﻿<Properties>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="HTTP5112_Cumulative_2.sln">
+    <Files>
+      <File FileName="HTTP5112_Cumulative_2.sln" Line="6" Column="75" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="HTTP5112_Cumulative_2" expanded="True" selected="True" />
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>String.Join(", ", semester.ToArray())</Value>
+          <Value>cmd.Parameters.AddWithValue("@keyName", "%" + className + "%")</Value>
+          <Value>cmd.Parameters.AddWithValue("@keyCode", "%" + classCode + "%")</Value>
+          <Value>cmd</Value>
+          <Value>and MONTH(startdate) IN (" + String.Join(", ", semester.ToArray()) + ")</Value>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+</Properties>
