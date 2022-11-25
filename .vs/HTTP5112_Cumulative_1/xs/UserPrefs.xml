@@ -1,0 +1,50 @@
+﻿<Properties StartupConfiguration="{4FA25A0D-9858-49B3-A05A-0E91D9307746}|Default">
+  <MonoDevelop.Ide.ItemProperties.HTTP5112__Cumulative__1 PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/buifamily.ceci/Projects/HTTP5112_Cumulative_2/HTTP5112_Cumulative_1/Controllers/TeacherDataController.cs" relfile="HTTP5112_Cumulative_1/Controllers/TeacherDataController.cs" line="111" column="1" />
+      <Breakpoint file="/Users/buifamily.ceci/Projects/HTTP5112_Cumulative_2/HTTP5112_Cumulative_1/Controllers/TeacherDataController.cs" relfile="HTTP5112_Cumulative_1/Controllers/TeacherDataController.cs" line="113" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="README.md">
+    <Files>
+      <File FileName="HTTP5112_Cumulative_1/Views/Home/Index.cshtml" Line="15" Column="7" IsPinned="True" />
+      <File FileName="HTTP5112_Cumulative_1/Views/Class/List.cshtml" Line="26" Column="39" />
+      <File FileName="HTTP5112_Cumulative_1/Controllers/ClassController.cs" Line="22" Column="28" />
+      <File FileName="HTTP5112_Cumulative_1/Views/Shared/_Layout.cshtml" Line="26" Column="112" />
+      <File FileName="README.md" Line="13" Column="140" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="HTTP5112_Cumulative_1" expanded="True">
+            <Node name="HTTP5112_Cumulative_1" expanded="True">
+              <Node name="Capture" expanded="True" />
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Class" expanded="True" />
+                <Node name="Home" expanded="True" />
+                <Node name="Shared" expanded="True" />
+                <Node name="Student" expanded="True" />
+                <Node name="Teacher" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>String.Join(", ", semester.ToArray())</Value>
+          <Value>cmd.Parameters.AddWithValue("@keyName", "%" + className + "%")</Value>
+          <Value>cmd.Parameters.AddWithValue("@keyCode", "%" + classCode + "%")</Value>
+          <Value>cmd</Value>
+          <Value>and MONTH(startdate) IN (" + String.Join(", ", semester.ToArray()) + ")</Value>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+</Properties>
