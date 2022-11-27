@@ -1,4 +1,4 @@
-﻿@model HTTP5112_Cumulative_1.Models.Class
+﻿@model HTTP5112_Cumulative_2.Models.Class
 @{
     ViewBag.Title = "Show";
 }
@@ -6,7 +6,7 @@
 <div>
     <a class="navlink" href="/Home">Back To Home</a>
     |
-    <a class="navlink" href="/Class/List">Back To Classes</a>
+    <a class="navlink" href="/Class/List?semester=9&semester=1">Back To Classes</a>
 </div>
 
 <div class="text-center">
@@ -18,4 +18,11 @@
     <p>Class Name: @Model.ClassName</p>
     <p>Start Date: @Model.StartDate</p>
     <p>Finish Date: @Model.FinishDate</p>
+    <p>
+        Teacher:
+        @if (Model.TeacherId != null)
+        {
+            <a href="/Teacher/Show/@Model.ClassTeacher.TeacherId">@Model.ClassTeacher.TeacherFname @Model.ClassTeacher.TeacherLname</a>
+        }
+    </p>
 </div>

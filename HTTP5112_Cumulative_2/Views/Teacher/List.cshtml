@@ -1,4 +1,4 @@
-﻿@model IEnumerable<HTTP5112_Cumulative_1.Models.Teacher>
+﻿@model IEnumerable<HTTP5112_Cumulative_2.Models.Teacher>
 @{
     ViewBag.Title = "Teacher List";
 }
@@ -12,6 +12,7 @@
 </div>
 
 <div id="containerlist">
+    <a class="link" href="/Teacher/New">New Teacher</a>
     <h2>List of Teachers</h2>
     <form action="/Teacher/List" method="GET">
         <input type="text" name="SearchKey" autocomplete="off" />

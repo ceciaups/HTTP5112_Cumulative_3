@@ -8,17 +8,17 @@
     }
   },
   "profiles": {
-    "HTTP5112_Cumulative_1": {
-      "commandName": "Project",
+    "IIS Express": {
+      "commandName": "IISExpress",
       "launchBrowser": true,
-      "applicationUrl": "http://localhost:5132",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "IIS Express": {
-      "commandName": "IISExpress",
+    "HTTP5112_Cumulative_2": {
+      "commandName": "Project",
       "launchBrowser": true,
+      "applicationUrl": "http://localhost:5132",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

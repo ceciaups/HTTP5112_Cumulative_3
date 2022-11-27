@@ -4,10 +4,10 @@ using System.Linq;
 using System.Reflection.Metadata;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using HTTP5112_Cumulative_1.Models;
+using HTTP5112_Cumulative_2.Models;
 using MySql.Data.MySqlClient;
 
-namespace HTTP5112_Cumulative_1.Controllers
+namespace HTTP5112_Cumulative_2.Controllers
 {
     public class ClassDataController : Controller
     {
@@ -45,7 +45,9 @@ namespace HTTP5112_Cumulative_1.Controllers
             {
                 int ClassId = Convert.ToInt32(ResultSet["classid"]);
                 string ClassCode = ResultSet["classcode"].ToString();
-                int TeacherId = Convert.ToInt32(ResultSet["teacherid"]);
+                int? TeacherId = null;
+                if (ResultSet["teacherid"].ToString() != "")
+                    TeacherId = Convert.ToInt32(ResultSet["teacherid"]);
                 string StartDate = ResultSet["startdate"].ToString();
                 string FinishDate = ResultSet["finishdate"].ToString();
                 string ClassName = ResultSet["classname"].ToString();
@@ -82,7 +84,7 @@ namespace HTTP5112_Cumulative_1.Controllers
 
             MySqlCommand cmd = Conn.CreateCommand();
 
-            cmd.CommandText = "SELECT * FROM classes WHERE classid = @id";
+            cmd.CommandText = "SELECT * FROM classes LEFT OUTER JOIN teachers ON teachers.teacherid = classes.teacherid WHERE classes.classid = @id";
 
             cmd.Parameters.AddWithValue("@id", id);
             cmd.Prepare();
@@ -95,7 +97,9 @@ namespace HTTP5112_Cumulative_1.Controllers
             {
                 int ClassId = Convert.ToInt32(ResultSet["classid"]);
                 string ClassCode = ResultSet["classcode"].ToString();
-                int TeacherId = Convert.ToInt32(ResultSet["teacherid"]);
+                int? TeacherId = null;
+                if (ResultSet["teacherid"].ToString() != "")
+                    TeacherId = Convert.ToInt32(ResultSet["teacherid"]);
                 string StartDate = ResultSet["startdate"].ToString();
                 string FinishDate = ResultSet["finishdate"].ToString();
                 string ClassName = ResultSet["classname"].ToString();
@@ -106,6 +110,26 @@ namespace HTTP5112_Cumulative_1.Controllers
                 NewClass.StartDate = StartDate;
                 NewClass.FinishDate = FinishDate;
                 NewClass.ClassName = ClassName;
+
+                if (ResultSet["teacherid"].ToString() != "")
+                {
+                    Teacher NewTeacher = new Teacher();
+                    int TeacherId2 = Convert.ToInt32(ResultSet["teacherid"]);
+                    string TeacherFname = ResultSet["teacherfname"].ToString();
+                    string TeacherLname = ResultSet["teacherlname"].ToString();
+                    string EmployeeNumber = ResultSet["employeenumber"].ToString();
+                    string HireDate = ResultSet["hiredate"].ToString();
+                    decimal Salary = Convert.ToDecimal(ResultSet["salary"]);
+
+                    NewTeacher.TeacherId = TeacherId2;
+                    NewTeacher.TeacherFname = TeacherFname;
+                    NewTeacher.TeacherLname = TeacherLname;
+                    NewTeacher.EmployeeNumber = EmployeeNumber;
+                    NewTeacher.HireDate = HireDate;
+                    NewTeacher.Salary = Salary;
+
+                    NewClass.ClassTeacher = NewTeacher;
+                }
             }
 
             Conn.Close();

@@ -1,8 +1,8 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using HTTP5112_Cumulative_1.Models;
+using HTTP5112_Cumulative_2.Models;
 
-namespace HTTP5112_Cumulative_1.Controllers;
+namespace HTTP5112_Cumulative_2.Controllers;
 
 public class HomeController : Controller
 {

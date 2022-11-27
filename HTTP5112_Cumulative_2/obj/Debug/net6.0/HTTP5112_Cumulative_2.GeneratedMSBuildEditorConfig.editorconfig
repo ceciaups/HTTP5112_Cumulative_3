@@ -47,8 +47,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3R1ZGVudC9TaG93LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/buifamily.ceci/Projects/HTTP5112_Cumulative_2/HTTP5112_Cumulative_2/Views/Teacher/DeleteConfirm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGVhY2hlci9EZWxldGVDb25maXJtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/buifamily.ceci/Projects/HTTP5112_Cumulative_2/HTTP5112_Cumulative_2/Views/Teacher/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGVhY2hlci9MaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/buifamily.ceci/Projects/HTTP5112_Cumulative_2/HTTP5112_Cumulative_2/Views/Teacher/New.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGVhY2hlci9OZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/buifamily.ceci/Projects/HTTP5112_Cumulative_2/HTTP5112_Cumulative_2/Views/Teacher/Show.cshtml]

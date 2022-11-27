@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using HTTP5112_Cumulative_1.Models;
+using HTTP5112_Cumulative_2.Models;
 using MySql.Data.MySqlClient;
 using Org.BouncyCastle.Asn1.X509;
 
-namespace HTTP5112_Cumulative_1.Controllers
+namespace HTTP5112_Cumulative_2.Controllers
 {
     public class StudentController : Controller
     {

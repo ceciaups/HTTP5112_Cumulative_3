@@ -1,4 +1,4 @@
-﻿@model HTTP5112_Cumulative_1.Models.Teacher
+﻿@model HTTP5112_Cumulative_2.Models.Teacher
 @{
     ViewBag.Title = "Show";
 }
@@ -14,6 +14,7 @@
 </div>
 
 <div id="containershow">
+    <a class="link" href="/Teacher/DeleteConfirm/@Model.TeacherId">Delete</a>
     <h2>@Model.TeacherFname @Model.TeacherLname</h2>
     <p>Employee Number: @Model.EmployeeNumber</p>
     <p>Hire Date: @Model.HireDate</p>

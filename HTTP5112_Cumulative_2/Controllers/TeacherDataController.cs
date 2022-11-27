@@ -5,10 +5,11 @@ using System.Linq;
 using System.Reflection.Metadata;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using HTTP5112_Cumulative_1.Models;
+using HTTP5112_Cumulative_2.Models;
 using MySql.Data.MySqlClient;
+using Microsoft.AspNetCore.Cors;
 
-namespace HTTP5112_Cumulative_1.Controllers
+namespace HTTP5112_Cumulative_2.Controllers
 {
     public class TeacherDataController : Controller
     {
@@ -29,7 +30,6 @@ namespace HTTP5112_Cumulative_1.Controllers
 
             MySqlCommand cmd = Conn.CreateCommand();
 
-            //cmd.CommandText = "SELECT * FROM teachers where lower(teacherfname) like lower(@key) or lower(teacherlname) like lower(@key) or lower(concat(teacherfname, ' ', teacherlname)) like lower(@key)";
             cmd.CommandText = "SELECT * FROM teachers where lower(concat(teacherfname, ' ', teacherlname)) like lower(@key)";
 
             cmd.Parameters.AddWithValue("@key", "%" + SearchKey + "%");
@@ -106,8 +106,6 @@ namespace HTTP5112_Cumulative_1.Controllers
                 NewTeacher.HireDate = HireDate;
                 NewTeacher.Salary = Salary;
 
-                Debug.WriteLine(ResultSet["classid"].ToString());
-
                 if (ResultSet["classid"].ToString() != "")
                 {
                     Class NewClass = new Class();
@@ -133,6 +131,75 @@ namespace HTTP5112_Cumulative_1.Controllers
             Conn.Close();
 
             return NewTeacher;
+        }
+
+        /// <summary>
+        /// Deletes an Teacher from the connected MySQL Database if the ID of that Teacher exists. Does NOT maintain relational integrity. Non-Deterministic.
+        /// </summary>
+        /// <param name="id">The ID of the Teacher.</param>
+        /// <example>POST /api/TeacherData/DeleteTeacher/3</example>
+        [HttpPost]
+        public void DeleteTeacher(int id)
+        {
+            MySqlConnection Conn = School.AccessDatabase();
+
+            Conn.Open();
+
+            MySqlCommand cmd = Conn.CreateCommand();
+
+            cmd.CommandText = "Delete from Teachers where Teacherid=@id";
+            cmd.Parameters.AddWithValue("@id", id);
+            cmd.Prepare();
+
+            cmd.ExecuteNonQuery();
+
+            cmd.CommandText = "Update Classes Set Teacherid=null where Teacherid=@id";
+            cmd.Prepare();
+
+            cmd.ExecuteNonQuery();
+
+            Conn.Close();
+        }
+
+        /// <summary>
+        /// Adds an Teacher to the MySQL Database.
+        /// </summary>
+        /// <param name="NewTeacher">An object with fields that map to the columns of the Teacher's table. Non-Deterministic.</param>
+        /// <example>
+        /// POST api/TeacherData/AddTeacher 
+        /// FORM DATA / POST DATA / REQUEST BODY 
+        /// {
+        ///	"TeacherFname":"Caitlin",
+        ///	"TeacherLname":"Cummings",
+        ///	"EmployeeNumber":"T381",
+        ///	"HireDate":"10/6/2014 12:00:00 AM"
+        ///	"Salary":"2.77"
+        /// }
+        /// </example>
+        [HttpPost]
+        //[EnableCors(origins: "*", methods: "*", headers: "*")]
+        public void AddTeacher([FromBody] Teacher NewTeacher)
+        {
+            MySqlConnection Conn = School.AccessDatabase();
+
+            Debug.WriteLine(NewTeacher.TeacherFname);
+
+            Conn.Open();
+
+            MySqlCommand cmd = Conn.CreateCommand();
+
+            cmd.CommandText = "insert into Teachers (Teacherfname, Teacherlname, EmployeeNumber, HireDate, Salary) values (@TeacherFname, @TeacherLname, @EmployeeNumber, @HireDate, @Salary)";
+            cmd.Parameters.AddWithValue("@TeacherFname", NewTeacher.TeacherFname);
+            cmd.Parameters.AddWithValue("@TeacherLname", NewTeacher.TeacherLname);
+            cmd.Parameters.AddWithValue("@EmployeeNumber", NewTeacher.EmployeeNumber);
+            cmd.Parameters.AddWithValue("@HireDate", NewTeacher.HireDate);
+            cmd.Parameters.AddWithValue("@Salary", NewTeacher.Salary);
+            cmd.Prepare();
+
+            cmd.ExecuteNonQuery();
+
+            Conn.Close();
+
         }
     }
 }

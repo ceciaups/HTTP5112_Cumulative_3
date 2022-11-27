@@ -16,3 +16,13 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.link {
+  color: #dd1111;
+  float: right;
+  padding: 5px 0;
+}
+
+.err-msg {
+    color: #dd1111;
+}
