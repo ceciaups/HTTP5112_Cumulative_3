@@ -1,17 +1,19 @@
-﻿<Properties>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="HTTP5112_Cumulative_2.sln">
+﻿<Properties StartupConfiguration="{4FA25A0D-9858-49B3-A05A-0E91D9307746}|Default">
+  <MonoDevelop.Ide.ItemProperties.HTTP5112__Cumulative__2 PreferredExecutionTarget="/Applications/Safari.app" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="HTTP5112_Cumulative_3/wwwroot/js/site.js">
     <Files>
-      <File FileName="HTTP5112_Cumulative_2.sln" Line="6" Column="75" />
+      <File FileName="README.md" Line="9" Column="21" />
+      <File FileName="HTTP5112_Cumulative_2/Controllers/TeacherController.cs" Line="41" Column="42" />
+      <File FileName="HTTP5112_Cumulative_2/wwwroot/js/site.js" Line="12" Column="36" />
+      <File FileName="HTTP5112_Cumulative_2/wwwroot/css/site.css" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="HTTP5112_Cumulative_2" expanded="True" selected="True" />
+          <Node name="HTTP5112_Cumulative_2" expanded="True">
+            <Node name="HTTP5112_Cumulative_2" expanded="True" />
+          </Node>
         </State>
       </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
@@ -21,9 +23,16 @@
           <Value>cmd.Parameters.AddWithValue("@keyCode", "%" + classCode + "%")</Value>
           <Value>cmd</Value>
           <Value>and MONTH(startdate) IN (" + String.Join(", ", semester.ToArray()) + ")</Value>
+          <Value>(ResultSet["teacherid"])</Value>
+          <Value>Model.TeacherId</Value>
+          <Value>(Model.TeacherId)</Value>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>

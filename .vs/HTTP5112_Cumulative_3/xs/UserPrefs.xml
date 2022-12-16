@@ -1,0 +1,50 @@
+﻿<Properties StartupConfiguration="{4FA25A0D-9858-49B3-A05A-0E91D9307746}|Default">
+  <MonoDevelop.Ide.ItemProperties.HTTP5112__Cumulative__3 PreferredExecutionTarget="/Applications/Safari.app" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="README.md">
+    <Files>
+      <File FileName="HTTP5112_Cumulative_3/Views/Teacher/New.cshtml" Line="18" Column="64" />
+      <File FileName="HTTP5112_Cumulative_3/Views/Teacher/Update.cshtml" Line="26" Column="57" />
+      <File FileName="HTTP5112_Cumulative_3/wwwroot/js/site.js" Line="11" Column="38" />
+      <File FileName="HTTP5112_Cumulative_3/Views/Teacher/Show.cshtml" Line="12" Column="1" />
+      <File FileName="README.md" Line="30" Column="205" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="HTTP5112_Cumulative_3" expanded="True" selected="True">
+            <Node name="HTTP5112_Cumulative_3" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True" />
+                <Node name="Teacher" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
+                <Node name="js" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>String.Join(", ", semester.ToArray())</Value>
+          <Value>cmd.Parameters.AddWithValue("@keyName", "%" + className + "%")</Value>
+          <Value>cmd.Parameters.AddWithValue("@keyCode", "%" + classCode + "%")</Value>
+          <Value>cmd</Value>
+          <Value>and MONTH(startdate) IN (" + String.Join(", ", semester.ToArray()) + ")</Value>
+          <Value>(ResultSet["teacherid"])</Value>
+          <Value>Model.TeacherId</Value>
+          <Value>(Model.TeacherId)</Value>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+</Properties>
