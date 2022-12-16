@@ -11,7 +11,7 @@
 ## JavaScript:
 - [/wwwroot/js/site.js](HTTP5112_Cumulative_3/wwwroot/js/site.js)
 - JavaScript file for the whole site
-- Validate the user inputs in Teacher's New Page by regular expression to ensure that the user doesn’t accidentally submit a form with missing/incorrect information
+- Validate the user inputs in Teacher's New Page and Teacher's Update Page by regular expression to ensure that the user doesn’t accidentally submit a form with missing/incorrect information
 
 ## Home:
 ![The layout of the Home Page](https://raw.githubusercontent.com/ceciaups/HTTP5112_Cumulative_3/master/HTTP5112_Cumulative_3/Capture/home.png)

@@ -3,22 +3,26 @@
 
 // Write your JavaScript code.
 
-var formHandle1 = document.forms.newform;
-if (formHandle1 != null)
-    formHandle1.onsubmit = passForm1;
-var formHandle2 = document.forms.updateform;
-if (formHandle2 != null)
-    formHandle2.onsubmit = passForm2;
+// Validate the user inputs in Teacher's New Page
+var addTeacher = document.forms.newform;
+if (addTeacher != null)
+    addTeacher.onsubmit = passNewForm;
 
-function passForm1() {
-    return processForm(formHandle1);
+function passNewForm() {
+    return validateTeacher(addTeacher);
 }
 
-function passForm2() {
-    return processForm(formHandle2);
+// Validate the user inputs in Teacher's Update Page
+var updateTeacher = document.forms.updateform;
+if (updateTeacher != null)
+    updateTeacher.onsubmit = passUpdateForm;
+
+function passUpdateForm() {
+    return validateTeacher(updateTeacher);
 }
 
-function processForm(formHandle) {
+// Validate the user inputs for Teacher Class by regular expression
+function validateTeacher(formHandle) {
     const TeacherFname = formHandle.TeacherFname;
     const TeacherLname = formHandle.TeacherLname;
     const EmployeeNumber = formHandle.EmployeeNumber;

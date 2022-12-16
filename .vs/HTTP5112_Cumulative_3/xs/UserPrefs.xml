@@ -7,13 +7,14 @@
       <File FileName="HTTP5112_Cumulative_3/Views/Teacher/Update.cshtml" Line="26" Column="57" />
       <File FileName="HTTP5112_Cumulative_3/wwwroot/js/site.js" Line="11" Column="38" />
       <File FileName="HTTP5112_Cumulative_3/Views/Teacher/Show.cshtml" Line="12" Column="1" />
-      <File FileName="README.md" Line="30" Column="205" />
+      <File FileName="README.md" Line="2" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="HTTP5112_Cumulative_3" expanded="True" selected="True">
+          <Node name="HTTP5112_Cumulative_3" expanded="True">
             <Node name="HTTP5112_Cumulative_3" expanded="True">
+              <Node name="Capture" expanded="True" />
               <Node name="Controllers" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="Views" expanded="True">

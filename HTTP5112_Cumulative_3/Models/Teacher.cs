@@ -17,6 +17,7 @@ namespace HTTP5112_Cumulative_3.Models
         public decimal Salary;
         public List<Class> CourseTaught;
 
+        // Validate fields except TeacherId and CourseTaught
         public bool IsValid()
         {
             Regex nameCheck = new Regex(@"[A-Za-z]+");
